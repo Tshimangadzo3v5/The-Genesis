@@ -1,29 +1,15 @@
-# The Genesis - SE Project
+                     SALUTATIONS Mr. C KABUYA 
+"Is it said that Technology is best in bringing people together." – Matt Mullenweg
 
-## Project Overview
-...
-
-## Team Members
-1. Tshimangazo Surprise Masia ().
-2. Khanyisa Kamba ().
-3. Billy Mokoena ().
-4. Luxolo Mkhathazo ().
-5. Aobakwe Keeme ().
-   
-## Features
-- ...
-- ...
-- ...
-## Technologies Used
-- Language/Framework 1... 
-- Database 1...
-- Deployment Platform (e.g., AWS, Azure, DigitalOcean)...
-  
-## Setup Instructions
-1. Clone the repo: `git clone https://github.com/team-name/project.git`
-2. Install dependencies: `npm install`
-3. Run the project: `npm start` 
-
-<hr>
-<b><i>"..." and "()" subjected to change</i></b>
-<hr>
+Team Genesis is proud to present our project, aimed at improving spaza shop 
+registration. We look forward to your guidance and feedback, which will enhance our 
+work and support our growth as innovators. Your expertise will help us refine our 
+approach as we embrace learning and collaboration to achieve our mission.
+ 
+                      PRESENTING THE GENESIS 
+The Project Manager – Tshimangadzo Surprise Masia (221414061)
+The Tester – Khanyisa Kamba (221711481)
+The Front-End Developer – Aobakwe Keeme (221515445)
+The System Designer/Administrator – Billy Mokoena (221839593)
+The Back-End Developer – Luxolo Mkhathazo (220435898)
+            "THE GENESIS – THE POWER OF NEW BEGINNINGS"
