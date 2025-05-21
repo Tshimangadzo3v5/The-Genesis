@@ -96,7 +96,6 @@ cost cloud resources for scalability, security, and maintainability.
 - Failover & Redundancy: Basic covered by cloud provider (Render, Supabase).
 - Firewalls: Inherent in managed hosting environments.
 
-
 ## Communication Between Components
 
 This section describes how SSRMS components communicate to ensure smooth
