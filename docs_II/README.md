@@ -6,6 +6,9 @@ This folder contains **additional work and research** conducted by each team mem
 
 Each subfolder corresponds to a specific role in the project and contains work unique to that role.
 
+> [!IMPORTANT]
+> MEMBERS ARE ADVISED TO SUBMIT THEIR DELIVERABLES UNDER `docs/` FOLDER
+
 ## Folder Structure & Contributions
 
 - `project_manager/`  
