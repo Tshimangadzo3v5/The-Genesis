@@ -3,11 +3,11 @@
 The SSRMS system is organized into the following logical service layers to promote
 separation of concerns, scalability, and maintainability.
 
-## Layered Architecture Diagram
+### Layered Architecture Diagram
 
 ![Layered Architecture Diagram](diagrams/layered_architecture.jpg)
 
-## Responsibilities by Layer
+### Responsibilities by Layer
 
 Presentation Layer
 
@@ -49,22 +49,20 @@ Integration Layer
 - Email/SMS Gateway: Sends notifications via a communication service.
 Geolocation API: Converts shop addresses to latitude/longitude.
 
-
-
-# Deployment Model
+## Deployment Model
 
 The SSRMS will be deployed as a modular, cloud-hosted application using containerized
 services. The architecture follows a microservices-inspired pattern using free-tier or low-
 cost cloud resources for scalability, security, and maintainability.
 
-## Deployment Style
+### Deployment Style
 
 - Architecture: Modular deployment using containerized services
 - Pattern: Microservices-inspired (service separation without excessive orchestration)
 - Deployment Tools: Docker, CI/CD via GitHub Actions, Render/Supabase for hosting
 - Environments: Development, Staging, Production
 
-## Deployment Environment
+### Deployment Environment
 
 - Cloud Hosting: Primarily Render.com, Supabase.io, and Firebase (all free-tier
     capable).
@@ -73,7 +71,7 @@ cost cloud resources for scalability, security, and maintainability.
 - Authentication: Supabase Auth (email/password, OTP),
 - Container Management: Docker-managed containers deployed to Render.
 
-## Components & Hosting
+### Components & Hosting
 
 |     Component                    	  |     Hosting   Platform                	|     Notes                                               	        |
 |----------------------------------	  |---------------------------------------	|---------------------------------------------------------	|
@@ -85,11 +83,11 @@ cost cloud resources for scalability, security, and maintainability.
 |     File Storage                 	         |     Supabase Storage                  	|     For ID docs, shop images                            	|
 |     Notification   Service       	 |     Mailgun   / Twilio                	        |     Free-tier   for transactional SMS/email      |
 
-## Deployment Diagram
+### Deployment Diagram
 
 ![Deployment Diagram](diagrams/deployment_diagram.jpg)
 
-## Security & Availability Considerations
+### Security & Availability Considerations
 
 - Authentication: JWT tokens issued via Supabase Auth.
 - Access Controls: Role-based access for Admins, Owners, and Public.
@@ -99,12 +97,12 @@ cost cloud resources for scalability, security, and maintainability.
 - Firewalls: Inherent in managed hosting environments.
 
 
-# Communication Between Components
+## Communication Between Components
 
 This section describes how SSRMS components communicate to ensure smooth
 operation, enforce compliance, and support user interactions across interfaces.
 
-## Component Interactions
+### Component Interactions
 
 - Frontend to Backend (All Interfaces):
     - Web Frontend (Admin), Portal (Shop Owner), and Public App (Customer) communicate with the API Backend via HTTPS.
@@ -119,7 +117,7 @@ operation, enforce compliance, and support user interactions across interfaces.
     - Notification Service interacts with Mailgun or Twilio over HTTPS to send SMS/email alerts.
     - Ownership Verification Service may query a mock or third-party ID verification API.
 
-## 3.2. Communication Types
+### Communication Types
 
 |     Source                      |     Target                            |     Type             |     Protocol     |     Format        |
 |---------------------------------|---------------------------------------|----------------------|------------------|-------------------|
@@ -130,6 +128,5 @@ operation, enforce compliance, and support user interactions across interfaces.
 |     API   Services Internal     |     Between   Microservices           |     Synchronous      |     HTTP         |     JSON          |
 |     API Backend                 |     ID Verification API               |     Synchronous      |     HTTPS        |     JSON          |
 
-## Communication Diagram
+### Communication Diagram
 ![Communication Diagram](diagrams/communication_diagram.jpg) 
-
