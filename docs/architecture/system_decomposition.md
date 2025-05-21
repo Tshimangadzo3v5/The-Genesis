@@ -34,7 +34,7 @@ cost cloud resources for scalability, security, and maintainability.
 
 ## Deployment Diagram
 
-![Deployment Diagram](\diagrams\deployment_diagram.jpg)
+![Deployment Diagram](/diagrams/deployment_diagram.jpg)
 
 ## Security & Availability Considerations
 
