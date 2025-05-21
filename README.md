@@ -6,6 +6,7 @@ Team Genesis is proud to present our project, aimed at improving spaza shop
 registration. We look forward to your guidance and feedback, which will enhance our 
 work and support our growth as innovators. Your expertise will help us refine our 
 approach as we embrace learning and collaboration to achieve our mission.
+Hope the delivery is to your liking "docsII" has addictional documents of the work that members did e.g research.
  
                       PRESENTING THE GENESIS 
                       
