@@ -1,0 +1,88 @@
+Sprint Backlog - Spaza Shop Management System
+(SSMS)
+
+SPRINT P1
+A time-boxed schedule that outlines the team's goals, tasks, and deliverables for a 
+specific sprint, usually spanning 1–2 weeks.
+SPRINT BACLOG
+A prioritized list of tasks and user stories selected for implementation during the 
+sprint, including estimated time and assignees
+Sprint 1 – Research & Team Brainstorming (Completed)
+Duration: Tasks are delivered on Mondays and are to be presented on Fridays 
+Meetings: Held on Microsoft Teams on Fridays.
+SPRINT 1 OUTCOME REVIEW SUMMARY
+Sprint 1 focused on role-based research to explore the challenges and requirements 
+of a spaza shop regulation system in South Africa. Each team member investigated 
+specific aspects aligned with their roles (e.g., testing, UI, backend, system design), 
+resulting in a well-rounded understanding of the ecosystem. By the end of the week, 
+members presented their findings in a collaborative Friday Teams meeting, where 
+they brainstormed core ideas and established a unified product vision. The session 
+helped lay the groundwork for upcoming design and development phases.
+
+Sprint 1 Retrospective
+What Went Well
+-Team members completed their individual research effectively, providing strong 
+foundational insights based on their assigned roles.
+-The Friday meeting was successfully held, and everyone presented their findings, 
+which helped establish a clear and unified project vision.
+-The brainstorming session allowed the team to align on potential system features 
+and user needs, setting the stage for structured development in upcoming sprints.
+-Despite communication gaps earlier in the week, the team showed initiative during 
+presentations and contributed meaningfully to discussions.
+What Could Be Improved
+-GitHub and documentation setup were delayed due to a lack of early direction and 
+clarity on folder structure expectations from project manager.
+-Research submissions were not shared in advance, which limited meaningful 
+feedback during the Friday meeting.
+-Overlapping research areas led to redundant findings, highlighting the need for 
+better task scoping and coordination.
+-Inconsistent team communication during the week caused delays in confirming 
+responsibilities and slowed overall progress toward early deliverables.
+Action Items
+-Finalize and share GitHub folder structures by before the start of Sprint 2.
+-Begin sharing individual progress by Thursday to allow feedback ahead of Friday 
+meetings on the genesis group.
+-Set up a lightweight Monday check-in via group chat to align before Friday 
+reviews...
+________________________________________________________________________________________
+
+Sprint 2
+Outcome Review Summary: Sprint 2 Has began the design and 
+planning phase for the Spaza Shop Regulatory & Management System (SSRMS). The 
+goal of this sprint was to visualize the system through wireframes, create flow 
+diagrams, and define how users will navigate the interface.
+-Team members are currently following a sequential workflow: the System Designer 
+initiates design drafts, which are then reviewed by the Front-End Developer and 
+finally evaluated for back-end feasibility. 
+-Members are collaborating via Teams and the Genesis WhatsApp group to provide 
+design feedback and approve progress across roles.
+Sprint 2 Retrospective
+What’s Going Well
+-The team has adopted the sequential UI review flow (System Designer → Front-End 
+→ Back-End).
+-Members are making use of visual tools (Figma, Balsamiq) to translate research into 
+wireframes.
+-Communication structure is more defined, with tasks being reported on Friday 
+meetings.
+What Could Be Improved
+-GitHub updates have been inconsistent across team members.
+-Wireframe description document is pending, slowing the Front-End handoff.
+-Some delays occurred due to uncoordinated progress updates mid-week.
+Action Items
+-Enforce GitHub usage with timely commits and folder structure verification.
+-Submit visual assets and markdown files to be review
+_________________________________________________________________________________
+
+Sprint 3 Retrospective (planned)
+What’s Expected to Go Well
+-Build upon UI wireframes to map functional behaviours and user needs.
+-Use refined roles and clearer communication structures from Sprint 2.
+Risks to Watch
+-Lack of clarity in story-to-feature mapping could delay system architecture.
+-Overload of unassigned architecture tasks if scoping isn't clear early on.
+Action Items (Planned)
+-Assign persona/story writing early in the sprint to the Tester.
+-Use diagrams early to support developer architecture discussions and confirm tech 
+stack with justifications for front-end and back-end compatibility.
+
+
