@@ -33,4 +33,5 @@ Each subfolder corresponds to a specific role in the project and contains work u
 - To **showcase our initiative** and the deeper research we did in preparation and throughout development
 - To **demonstrate transparency** in our individual roles and contributions
 - To **provide a behind-the-scenes look** at the reasoning and work that guided the final system
--An extra file for team members to chek, review and give feedback to the work done .
+  
+-And extra file for team members to chek, review and give feedback to the work done .
