@@ -1,7 +1,30 @@
 A BREAKDOWN OF FEATURES CATEGORIZIED INTO 
+
 1.MUST 
+The SSMS must include core features that are non-negotiable to ensure the system fulfills its purpose of safeguarding communities and regulating spaza shop activities. 
+First, shop registration is essential to keep an official record of all spaza shops, including owner identity, location, nationality, and licensing status. 
+Another must-have is product inventory monitoring, which allows the system to track each product sold, monitor expiry dates, and log supplier details to detect counterfeit or expired goods. 
+A complaint reporting tool is vital for the public to report harmful or suspicious products directly, possibly with images.
+In addition, the system must support inspection scheduling and record-keeping, so health officers can log visits, violations, and penalties accurately. 
+Strong authentication and role-based access control is necessary to secure the platform for different users — such as government officials, shop owners, and community members. 
+Lastly, the system must send real-time alerts and notifications for issues like expired products, and include a dashboard displaying compliance data, violation hotspots, and active cases.
+
 2.SHOULD 
+While not essential for the initial version, the SSMS should include features that significantly improve its effectiveness. 
+A key feature is vendor verification, especially for products made in informal or home-based settings. 
+This ensures that such goods meet minimum safety requirements. 
+Similarly, a brand authentication check using barcode scans would help verify whether products are genuine or fake.
+Multilingual support is another important addition, ensuring the system is usable by people across all language groups in South Africa. 
+A mobile app version would greatly improve access, allowing inspectors and community members to engage with the system in real time.
+Another helpful feature would be community feedback ratings, allowing customers to rate shops based on safety and cleanliness, encouraging responsible behavior through public accountability.
+
 3.COULD
+In future versions, the SSMS could integrate features that add long-term value and community engagement. 
+One such feature is AI-driven risk prediction, which would analyze trends to flag high-risk shops before harm occurs. 
+The system could also host an e-learning portal, providing training modules on hygiene, compliance, and ethical business practices for shop owners.
+To further encourage good practices, a rewards system could offer digital badges or discounts to compliant shops. Including a live chat support system would make it easier for users to get help quickly, 
+while integration with local community watch or WhatsApp groups could strengthen the link between digital monitoring and physical community safety efforts.
+
 
 
 
