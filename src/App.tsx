@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Wrench } from 'lucide-react';
 
-function App() {
+function App() { 
   return (
     <div className="flex flex-col items-center justify-between h-screen bg-gradient-to-br from-gray-900 to-gray-700 text-white text-center p-6">
 
