@@ -1,60 +1,57 @@
-import { motion } from 'framer-motion';
-import { Wrench } from 'lucide-react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { AuthProvider } from './contexts/AuthContext';
+import { useAuth } from './hooks/useAuth';
+import LandingPage from './components/LandingPage';
+import SignInPage from './components/SignInPage';
+import ShopOwnerDashboard from './components/ShopOwnerDashboard';
+import GovernmentDashboard from './components/GovernmentDashboard';
+import CustomerDashboard from './components/CustomerDashboard';
+import ShopProfile from './components/ShopProfile';
 
-function App() { 
+function AppRoutes() {
+  const { user } = useAuth();
+
+  if (!user) {
+    return (
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/signin" element={<SignInPage />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    );
+  }
+
   return (
-    <div className="flex flex-col items-center justify-between h-screen bg-gradient-to-br from-gray-900 to-gray-700 text-white text-center p-6">
+    <Routes>
+      {user.role === 'shop-owner' && (
+        <>
+          <Route path="/dashboard" element={<ShopOwnerDashboard />} />
+          <Route path="/shop-profile" element={<ShopProfile />} />
+        </>
+      )}
+      {user.role === 'government' && (
+        <Route path="/dashboard" element={<GovernmentDashboard />} />
+      )}
+      {user.role === 'customer' && (
+        <>
+          <Route path="/dashboard" element={<CustomerDashboard />} />
+          <Route path="/shop-profile" element={<ShopProfile />} />
+        </>
+      )}
+      <Route path="*" element={<Navigate to="/dashboard" />} />
+    </Routes>
+  );
+}
 
-      {/* Main Content */}
-      <div className="flex flex-col items-center justify-center flex-1">
-        {/* Title */}
-        <motion.h1
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="text-4xl font-bold mb-10"
-        >
-          SSRMS | Spaza Shop Registration & Management System
-        </motion.h1>
-
-        {/* Animated Icon */}
-        <motion.div
-          initial={{ scale: 0.5, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          className="mb-6"
-        >
-          <Wrench className="w-24 h-24 text-yellow-400 animate-spin-slow" />
-        </motion.div>
-
-        {/* Under Development Text */}
-        <motion.h2
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-          className="text-2xl font-semibold text-yellow-300 mb-10"
-        >
-          🚧 Under Development 🚧
-        </motion.h2>
-
-        {/* Description */}
-        <motion.p
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 1 }}
-          className="text-lg max-w-2xl text-gray-300 px-4"
-        >
-          The Spaza Shop Registration & Management System (SSRMS) is a digital platform
-          designed to streamline the registration, verification, and compliance monitoring
-          of spaza shops across South Africa.
-        </motion.p>
-      </div>
-
-      {/* Footer */}
-      <footer className="text-sm text-gray-400 mt-6">
-        Built with ❤️ for South African communities
-      </footer>
-    </div>
+function App() {
+  return (
+    <AuthProvider>
+      <Router>
+        <div className="min-h-screen bg-gray-50">
+          <AppRoutes />
+        </div>
+      </Router>
+    </AuthProvider>
   );
 }
 
