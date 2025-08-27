@@ -50,7 +50,10 @@ export default function ShopOwnerDashboard() {
       <header className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div>
-            <h1 className="text-2xl font-bold text-white">Shop Owner Dashboard</h1>
+            <Link to="/" className="flex items-center space-x-2 mb-2 hover:opacity-80 transition-opacity">
+              <img src="/logo.png" alt="SSRMS Logo" className="w-10 h-10 rounded-lg" />
+              <h1 className="text-2xl font-bold text-white">Shop Owner Dashboard</h1>
+            </Link>
             <p className="text-emerald-100">Welcome back, {user?.name}</p>
           </div>
           <div className="flex items-center space-x-3">

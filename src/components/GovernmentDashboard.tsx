@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import { LogOut } from 'lucide-react';
 
@@ -25,8 +26,8 @@ export default function GovernmentDashboard() {
   ];
 
   const upcomingInspections = [
-    { name: 'Mokoena Community Store', time: 'Tomorrow, 10:00 AM', location: '45 Nelson Mandela Dr, Mthatha' },
-    { name: 'Ubuntu Community Store', time: 'Tomorrow, 2:00 PM', location: '12 Siqongana St, Northcrest' },
+    { name: 'Mokoena Community Store', time: 'Tomorrow, 10:00 AM', location: '45 Vilakazi St, Soweto' },
+    { name: 'Ubuntu Community Store', time: 'Tomorrow, 2:00 PM', location: '12 Mandela Ave, Alexandra' },
     { name: 'Kasi Corner Shop', time: 'Friday, 9:00 AM', location: '78 Freedom Rd, Diepsloot' }
   ];
 
@@ -48,7 +49,10 @@ export default function GovernmentDashboard() {
       <header className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div>
-            <h1 className="text-2xl font-bold text-white">Government Official Dashboard</h1>
+            <Link to="/" className="flex items-center space-x-2 mb-2 hover:opacity-80 transition-opacity">
+              <img src="/logo.png" alt="SSRMS Logo" className="w-10 h-10 rounded-lg" />
+              <h1 className="text-2xl font-bold text-white">Government Official Dashboard</h1>
+            </Link>
             <p className="text-purple-100">Welcome back, {user?.name}</p>
           </div>
           <div className="flex items-center space-x-3">

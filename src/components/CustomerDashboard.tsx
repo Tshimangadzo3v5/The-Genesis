@@ -13,15 +13,15 @@ export default function CustomerDashboard() {
   ];
 
   const nearbyShops = [
-    { name: 'Mokoena Community Store', address: '45 Nelson Mandela Drive, Mthatha', rating: 5, status: 'Verified' },
-    { name: 'Ubuntu Community Store', address: '12 Siqongana Street, Northcrest', rating: 4, status: 'Verified' },
+    { name: 'Mokoena Community Store', address: '45 Vilakazi Street, Soweto', rating: 5, status: 'Verified' },
+    { name: 'Ubuntu Community Store', address: '12 Mandela Avenue, Alexandra', rating: 4, status: 'Verified' },
     { name: 'Kasi Corner Shop', address: '78 Freedom Road, Diepsloot', rating: 5, status: 'Verified' },
     { name: 'Mzansi Mini Market', address: '34 Biko Street, Lenasia', rating: 4, status: 'Verified' }
   ];
 
   const favoriteShops = [
-    { name: 'Mokoena Community Store', address: '45 Nelson Mandela Drive, Mthatha', status: 'Open' },
-    { name: 'Ubuntu Community Store', address: '12 Siqongana Street, Northcrest', status: 'Open' },
+    { name: 'Mokoena Community Store', address: '45 Vilakazi Street, Soweto', status: 'Open' },
+    { name: 'Ubuntu Community Store', address: '12 Mandela Avenue, Alexandra', status: 'Open' },
     { name: 'Kasi Corner Shop', address: '78 Freedom Road, Diepsloot', status: 'Open' }
   ];
 
@@ -43,7 +43,10 @@ export default function CustomerDashboard() {
       <header className="bg-gradient-to-r from-pink-500 to-rose-500 text-white px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div>
-            <h1 className="text-2xl font-bold text-white">Customer Dashboard</h1>
+            <Link to="/" className="flex items-center space-x-2 mb-2 hover:opacity-80 transition-opacity">
+              <img src="/logo.png" alt="SSRMS Logo" className="w-10 h-10 rounded-lg" />
+              <h1 className="text-2xl font-bold text-white">Customer Dashboard</h1>
+            </Link>
             <p className="text-pink-100">Welcome back, {user?.name}</p>
           </div>
           <div className="flex items-center space-x-3">
