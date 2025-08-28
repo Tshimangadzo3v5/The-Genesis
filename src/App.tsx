@@ -9,6 +9,7 @@ import CustomerDashboard from './components/CustomerDashboard';
 import ShopProfile from './components/ShopProfile';
 import AboutPage from './pages/AboutPage';
 import FeaturesPage from './pages/FeaturesPage';
+import SupportPage from './pages/SupportPage';
 
 function AppRoutes() {
   const { user } = useAuth();
@@ -20,6 +21,7 @@ function AppRoutes() {
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/features" element={<FeaturesPage />} />
+        <Route path="/support" element={<SupportPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     );
@@ -44,6 +46,7 @@ function AppRoutes() {
       )}
       <Route path="/about" element={<AboutPage />} />
       <Route path="/features" element={<FeaturesPage />} />
+      <Route path="/support" element={<SupportPage />} />
       <Route path="*" element={<Navigate to="/dashboard" />} />
     </Routes>
   );
