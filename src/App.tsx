@@ -10,6 +10,9 @@ import ShopProfile from './components/ShopProfile';
 import AboutPage from './pages/AboutPage';
 import FeaturesPage from './pages/FeaturesPage';
 import SupportPage from './pages/SupportPage';
+import CompliancePage from './pages/CompliancePage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsOfServicePage from './pages/TermsOfServicePage';
 
 function AppRoutes() {
   const { user } = useAuth();
@@ -22,6 +25,9 @@ function AppRoutes() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/features" element={<FeaturesPage />} />
         <Route path="/support" element={<SupportPage />} />
+        <Route path="/compliance" element={<CompliancePage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+        <Route path="/terms-of-service" element={<TermsOfServicePage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     );
@@ -47,6 +53,9 @@ function AppRoutes() {
       <Route path="/about" element={<AboutPage />} />
       <Route path="/features" element={<FeaturesPage />} />
       <Route path="/support" element={<SupportPage />} />
+      <Route path="/compliance" element={<CompliancePage />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+      <Route path="/terms-of-service" element={<TermsOfServicePage />} />
       <Route path="*" element={<Navigate to="/dashboard" />} />
     </Routes>
   );
