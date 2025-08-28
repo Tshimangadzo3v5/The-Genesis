@@ -7,6 +7,7 @@ import ShopOwnerDashboard from './components/ShopOwnerDashboard';
 import GovernmentDashboard from './components/GovernmentDashboard';
 import CustomerDashboard from './components/CustomerDashboard';
 import ShopProfile from './components/ShopProfile';
+import FeaturesPage from './pages/FeaturesPage';
 
 function AppRoutes() {
   const { user } = useAuth();
@@ -16,6 +17,7 @@ function AppRoutes() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/signin" element={<SignInPage />} />
+        <Route path="/features" element={<FeaturesPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     );
@@ -38,6 +40,7 @@ function AppRoutes() {
           <Route path="/shop-profile" element={<ShopProfile />} />
         </>
       )}
+      <Route path="/features" element={<FeaturesPage />} />
       <Route path="*" element={<Navigate to="/dashboard" />} />
     </Routes>
   );
