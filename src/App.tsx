@@ -13,6 +13,8 @@ import SupportPage from './pages/SupportPage';
 import CompliancePage from './pages/CompliancePage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsOfServicePage from './pages/TermsOfServicePage';
+import FeedbackPage from './pages/FeedbackPage';
+
 
 function AppRoutes() {
   const { user } = useAuth();
@@ -28,6 +30,7 @@ function AppRoutes() {
         <Route path="/compliance" element={<CompliancePage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
         <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+        <Route path="/feedback" element={<FeedbackPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     );
@@ -56,6 +59,7 @@ function AppRoutes() {
       <Route path="/compliance" element={<CompliancePage />} />
       <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
       <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+      <Route path="/feedback" element={<FeedbackPage />} />
       <Route path="*" element={<Navigate to="/dashboard" />} />
     </Routes>
   );
