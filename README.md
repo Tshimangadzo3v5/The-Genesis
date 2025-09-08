@@ -219,10 +219,10 @@ We use conventional commits for clear project history:
 ## 🗺️ Roadmap
 
 ### Phase 1: Foundation ✅
-- [ ] Core UI components
-- [ ] Authentication system
-- [ ] Role-based dashboards
-- [ ] Responsive design
+- [x] Core UI components
+- [x] Authentication system
+- [x] Role-based dashboards
+- [x] Responsive design
 
 ### Phase 2: Backend Integration 🚧
 - [ ] Supabase database setup
@@ -230,13 +230,13 @@ We use conventional commits for clear project history:
 - [ ] Shop data management
 - [ ] Document upload system
 
-### Phase 3: Advanced Features 📋
+### Phase 3: Advanced Features (future) 📋
 - [ ] Real-time notifications
 - [ ] Map integration
 - [ ] Payment processing
 - [ ] Advanced analytics
 
-### Phase 4: Mobile & PWA 📱
+### Phase 4: Mobile & PWA (future) 📱
 - [ ] Progressive Web App features
 - [ ] Mobile app development
 - [ ] Offline functionality
