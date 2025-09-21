@@ -99,7 +99,7 @@ firebase-adminsdk-*.json
 *.db3
 
 # PostgreSQL
-*.sql
+# *.sql
 *.dump
 *.backup
 
