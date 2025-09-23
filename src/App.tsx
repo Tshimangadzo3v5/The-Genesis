@@ -17,7 +17,18 @@ import FeedbackPage from './pages/FeedbackPage';
 import ContactPage from './pages/ContactPage';
 
 function AppRoutes() {
-  const { user } = useAuth();
+  const { user, profile, loading } = useAuth();
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-12 h-12 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading...</p>
+        </div>
+      </div>
+    );
+  }
 
   if (!user) {
     return (
@@ -39,16 +50,16 @@ function AppRoutes() {
 
   return (
     <Routes>
-      {user.role === 'shop-owner' && (
+      {profile?.role === 'shop_owner' && (
         <>
           <Route path="/dashboard" element={<ShopOwnerDashboard />} />
           <Route path="/shop-profile" element={<ShopProfile />} />
         </>
       )}
-      {user.role === 'government' && (
+      {profile?.role === 'government_official' && (
         <Route path="/dashboard" element={<GovernmentDashboard />} />
       )}
-      {user.role === 'customer' && (
+      {profile?.role === 'customer' && (
         <>
           <Route path="/dashboard" element={<CustomerDashboard />} />
           <Route path="/shop-profile" element={<ShopProfile />} />
