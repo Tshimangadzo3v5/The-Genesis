@@ -10,7 +10,7 @@ export interface Document {
   file_url?: string | null;
   status: string;
   expiry_date?: string | null;
-  uploaded_at: string;
+  uploaded_at: string | null;
   reviewed_by?: string | null;
   reviewed_at?: string | null;
   notes?: string | null;

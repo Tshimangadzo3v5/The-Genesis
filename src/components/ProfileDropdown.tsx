@@ -1,28 +1,33 @@
-import { useState, useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { User, Settings, LogOut, UserCircle } from 'lucide-react';
 import { useAuth } from '../hooks/useAuth';
 import { Link, useNavigate } from 'react-router-dom';
 
-export default function ProfileDropdown() {
+interface ProfileDropdownProps {
+  isOpen: boolean;
+  onToggle: () => void;
+  onClose: () => void;
+}
+
+export default function ProfileDropdown({ isOpen, onToggle, onClose }: ProfileDropdownProps) {
   const { user, profile, signOut } = useAuth();
-  const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
+        onClose();
       }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+  }, [onClose]);
 
   const handleSignOut = async () => {
     await signOut();
-    setIsOpen(false);
+    onClose();
     navigate('/');
   };
 
@@ -31,7 +36,7 @@ export default function ProfileDropdown() {
   return (
     <div className="relative" ref={dropdownRef}>
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={onToggle}
         className="flex items-center space-x-2 p-2 rounded-lg hover:bg-muted/80 transition-colors"
       >
         {profile?.avatar_url ? (
@@ -51,7 +56,7 @@ export default function ProfileDropdown() {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-56 bg-card border border-border rounded-lg shadow-lg z-50 py-2">
+        <div className="absolute right-0 mt-2 w-56 bg-card border border-border rounded-lg shadow-lg z-[100] py-2">
           <div className="px-4 py-3 border-b border-border">
             <p className="font-medium text-foreground">{profile?.full_name || 'User'}</p>
             <p className="text-sm text-muted-foreground truncate">{user.email}</p>
@@ -65,7 +70,7 @@ export default function ProfileDropdown() {
           <div className="py-1">
             <Link
               to="/profile"
-              onClick={() => setIsOpen(false)}
+              onClick={onClose}
               className="flex items-center space-x-2 px-4 py-2 text-sm text-foreground hover:bg-muted/50 transition-colors"
             >
               <User className="w-4 h-4" />
@@ -73,7 +78,7 @@ export default function ProfileDropdown() {
             </Link>
             <Link
               to="/settings"
-              onClick={() => setIsOpen(false)}
+              onClick={onClose}
               className="flex items-center space-x-2 px-4 py-2 text-sm text-foreground hover:bg-muted/50 transition-colors"
             >
               <Settings className="w-4 h-4" />

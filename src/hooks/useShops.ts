@@ -6,26 +6,26 @@ export interface Shop {
   id: string;
   owner_id: string;
   name: string;
-  description?: string | null;
   address: string;
-  phone?: string | null;
+  phone: string;
   email?: string | null;
-  business_registration_number?: string | null;
   business_type?: string | null;
-  vat_number?: string | null;
-  trading_license_number?: string | null;
-  tax_clearance_certificate?: string | null;
-  zoning_certificate?: string | null;
-  trading_hours?: any;
-  categories?: string[] | null;
-  logo_url?: string | null;
-  banner_url?: string | null;
+  business_name?: string | null;
+  registration_number?: string | null;
   status: string;
-  compliance_score: number | null;
+  compliance_score?: number | null;
+  compliance_status?: string | null;
+  last_compliance_check?: string | null;
+  next_inspection_date?: string | null;
+  province: string;
   latitude?: number | null;
   longitude?: number | null;
-  created_at: string;
-  updated_at: string;
+  trading_hours?: Record<string, any> | null;
+  created_at: string | null;
+  updated_at: string | null;
+  logo_url?: string | null;
+  categories?: string[];
+  description?: string | null;
 }
 
 export const useShops = () => {

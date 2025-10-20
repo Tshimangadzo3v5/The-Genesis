@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { ArrowLeft, Shield, CheckCircle, AlertTriangle, FileText, Users, Building, Phone, Mail } from 'lucide-react';
+import { ArrowLeft, Shield, CheckCircle, FileText, Building, Phone, Mail } from 'lucide-react';
+import ComplianceQuestionnaire from '../components/ComplianceQuestionnaire';
 
 const CompliancePage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
+  const [showQuestionnaire, setShowQuestionnaire] = useState(false);
 
   const complianceAreas = [
     {
@@ -252,7 +254,7 @@ const CompliancePage: React.FC = () => {
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Compliance Process</h2>
               <div className="space-y-6">
-                {complianceProcess.map((step, index) => (
+                {complianceProcess.map((step) => (
                   <div key={step.step} className="bg-white rounded-lg shadow-sm border p-6">
                     <div className="flex items-start">
                       <div className="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-semibold mr-4 flex-shrink-0">
@@ -386,11 +388,19 @@ const CompliancePage: React.FC = () => {
           <p className="text-teal-100 mb-6 max-w-2xl mx-auto">
             Start your compliance journey today and join thousands of verified spaza shops across South Africa.
           </p>
-          <button className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+          <button 
+            onClick={() => setShowQuestionnaire(true)}
+            className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+          >
             Start Compliance Assessment
           </button>
         </div>
       </div>
+      
+      <ComplianceQuestionnaire 
+        isOpen={showQuestionnaire} 
+        onClose={() => setShowQuestionnaire(false)} 
+      />
     </div>
   );
 };

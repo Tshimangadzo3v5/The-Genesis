@@ -55,10 +55,15 @@ export default function ShopProfile() {
     { name: 'Snacks & Sweets', items: 28 }
   ];
 
+  const totalScore = shop.compliance_score || 0;
+  const businessRegPercentage = Math.min(100, (totalScore / 30) * 100);
+  const healthSafetyPercentage = Math.min(100, (totalScore / 40) * 100);
+  const taxCompliancePercentage = Math.min(100, (totalScore / 30) * 100);
+  
   const complianceItems = [
-    { name: 'Business Registration', percentage: 90, color: 'bg-green-500' },
-    { name: 'Health & Safety', percentage: 75, color: 'bg-yellow-500' },
-    { name: 'Tax Compliance', percentage: 85, color: 'bg-green-500' }
+    { name: 'Business Registration', percentage: Math.round(businessRegPercentage), color: businessRegPercentage >= 80 ? 'bg-green-500' : businessRegPercentage >= 50 ? 'bg-yellow-500' : 'bg-red-500' },
+    { name: 'Health & Safety', percentage: Math.round(healthSafetyPercentage), color: healthSafetyPercentage >= 80 ? 'bg-green-500' : healthSafetyPercentage >= 50 ? 'bg-yellow-500' : 'bg-red-500' },
+    { name: 'Tax Compliance', percentage: Math.round(taxCompliancePercentage), color: taxCompliancePercentage >= 80 ? 'bg-green-500' : taxCompliancePercentage >= 50 ? 'bg-yellow-500' : 'bg-red-500' }
   ];
 
   const handleShare = () => {
