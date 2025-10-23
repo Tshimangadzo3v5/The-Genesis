@@ -18,6 +18,5 @@ The Front-End Developer – Aobakwe Keeme (221515445)
 
 The System Designer/Administrator – Billy Mokoena (221839593)
 
-The Back-End Developer – Luxolo Mkhathazo (220435898)
 
             "THE GENESIS – THE POWER OF NEW BEGINNINGS"
