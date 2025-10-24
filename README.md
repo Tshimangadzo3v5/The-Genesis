@@ -14,7 +14,7 @@ The Project Manager – Tshimangadzo Surprise Masia (221414061)
 
 The Tester – Khanyisa Kamba (221711481)
 
-The Front-End Developer – Aobakwe Keeme (221515445)
+The Fullstack Developer – Aobakwe Keeme (221515445)
 
 The System Designer/Administrator – Billy Mokoena (221839593)
 
